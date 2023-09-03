@@ -1,0 +1,6 @@
+node_modules/
+build/
+mount/
+compilex.db*
+npm-debug.log
+.env.*

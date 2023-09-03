@@ -1,0 +1,43 @@
+/**
+ *  COMPILEX
+ *  Copyright (C) 2023, Adriane Justine Tan
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/mixins";
+
+.editor-sticky {
+  position: sticky;
+  top: 24px;
+}
+
+.editor-textarea {
+  min-height: 350px;
+}
+
+.editor-terminal {
+  color: #ffffff;
+  background-color: $dark;
+  font-family: monospace;
+}
+
+.editor-terminal-error {
+  color: #ffffff;
+  background-color: $danger-bg-subtle-dark;
+  border: 1px solid $danger-border-subtle-dark;
+}

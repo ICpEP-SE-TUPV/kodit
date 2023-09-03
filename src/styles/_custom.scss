@@ -1,0 +1,72 @@
+/**
+ *  COMPILEX
+ *  Copyright (C) 2023, Adriane Justine Tan
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+@import "variables";
+
+.bi::before {
+  display: inline-block;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nav-link {
+  color: $secondary;
+
+  &:not(.active) { color: $gray-500; }
+
+  &:hover,
+  &.active {
+    color: $light;
+  }
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  color: $primary-text;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: shade-color($primary-text, 25%);
+  }
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.modal-dialog[data-bs-theme="dark"] {
+  .modal-body {
+    background-color: $gray-900;
+    color: $modal-bg-text;
+    border-radius: $border-radius;
+  }
+}

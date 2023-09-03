@@ -1,0 +1,10 @@
+FROM alpine:latest
+USER root
+LABEL maintainer="Adriane Justine Tan <eidoriantan.me>"
+LABEL description="COMPILEX Docker image for running user programs."
+LABEL version="1.0.0"
+
+# Install supported compilers
+RUN apk update
+RUN apk --no-cache add g++ gcc
+RUN apk --no-cache add openjdk8
