@@ -119,7 +119,7 @@ const Homepage: React.FC = () => {
         <Container>
           <Row className="justify-content-between align-items-center mb-3">
             <Col xs="12" sm="12" md="6" xxl="8">
-              <h4>Quizzes</h4>
+              <h4>{ payload?.type === 'teacher' ? 'Your Quizzes' : 'Quizzes' }</h4>
             </Col>
 
             <Col xs="12" sm="12" md="6" xxl="4">
