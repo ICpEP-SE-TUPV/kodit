@@ -146,7 +146,7 @@ const QuizViewLearner: React.FC<QuizViewLearnerProps> = (props: QuizViewLearnerP
       <Row>
         <Col sm="12" md="4" lg="3">
           <div className="mb-2">Submission Status: <strong>{ submission !== null ? `Submitted at ${formatDate(submission.dateSubmitted)}` : 'Not yet submitted' }</strong></div>
-          <QuizCard quiz={quiz} score={earnedPoints} displayDates={true} className="mb-3 mb-sm-0" />
+          <QuizCard quiz={quiz} score={earnedPoints} displayDates={true} displayOwner={true} className="mb-3 mb-sm-0" />
         </Col>
 
         <Col sm="12" md="8" lg="9">

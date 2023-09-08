@@ -33,10 +33,11 @@ export interface QuizCardProps {
   score?: number;
   className?: string;
   displayDates?: boolean;
+  displayOwner?: boolean;
 }
 
 const QuizCard: React.FC<QuizCardProps> = (props: QuizCardProps) => {
-  const { quiz, score, className = '', displayDates } = props;
+  const { quiz, score, className = '', displayDates = false, displayOwner = false } = props;
 
   const totalPoints = useMemo(() => quiz.problems.reduce((accumulator, problem, i) => {
     return accumulator + problem.testcases.reduce((accumulator2, testcase) => {
@@ -53,6 +54,15 @@ const QuizCard: React.FC<QuizCardProps> = (props: QuizCardProps) => {
         <Card.Body className="d-flex flex-column">
           <Card.Title>{ quiz.name }</Card.Title>
           <Card.Text className="flex-fill">{ quiz.description }</Card.Text>
+
+          { displayOwner &&
+            <Card.Text as="div">
+              <div className="d-flex">
+                <div className="flex-fill">Created by:</div>
+                <span>{ quiz.username }</span>
+              </div>
+            </Card.Text>
+          }
 
           { displayDates && (quiz.startDate || quiz.endDate) &&
             <Card.Text as="div">
