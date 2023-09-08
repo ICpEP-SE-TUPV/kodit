@@ -1,5 +1,5 @@
 {
-  "name": "compilex",
+  "name": "kodit",
   "version": "1.0.0-beta.0",
   "private": true,
   "description": "Coding platform for practicing programming challenges",
@@ -11,17 +11,17 @@
   ],
   "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/eidoriantan/compilex/issues",
-    "email": "compilex@eidoriantan.me"
+    "url": "https://github.com/ICpEP-SE-TUPV/kodit/issues",
+    "email": "tupv.bscpe@tup.edu.ph"
   },
   "author": {
-    "name": "Adriane Justine Tan",
-    "email": "admin@eidoriantan.me",
-    "url": "https://eidoriantan.me"
+    "name": "ICpEP.SE - TUPV",
+    "email": "tupv.bscpe@tup.edu.ph",
+    "url": "https://icpep-se-tupv.pages.dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eidoriantan/compilex.git"
+    "url": "https://github.com/ICpEP-SE-TUPV/kodit.git"
   },
   "main": "server/index.js",
   "scripts": {

@@ -1,7 +1,7 @@
 FROM alpine:latest
 USER root
-LABEL maintainer="Adriane Justine Tan <eidoriantan.me>"
-LABEL description="COMPILEX Docker image for running user programs."
+LABEL maintainer="ICpEP.SE - TUPV <tupv.bscpe@tup.edu.ph>"
+LABEL description="KodIt Docker image for running user programs."
 LABEL version="1.0.0"
 
 # Install supported compilers

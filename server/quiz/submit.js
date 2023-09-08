@@ -1,6 +1,6 @@
 /**
- *  COMPILEX
- *  Copyright (C) 2023, Adriane Justine Tan
+ *  KodIt
+ *  Copyright (C) 2023, ICpEP.SE - TUPV
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -137,7 +137,7 @@ router.post('/:code/:problem', verifyAuth(AUTH_ALLOW_STUDENT), asyncWrap(async (
     '--memory', DOCKER_MEMORY_LIMIT,
     '-w', '/usr/src',
     '-i',
-    'eidoriantan/compilex-program:latest',
+    'eidoriantan/kodit-program:latest',
     'sh', '-c'
   ]
 

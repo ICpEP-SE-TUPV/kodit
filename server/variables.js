@@ -1,6 +1,6 @@
 /**
- *  COMPILEX
- *  Copyright (C) 2023, Adriane Justine Tan
+ *  KodIt
+ *  Copyright (C) 2023, ICpEP.SE - TUPV
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,6 +18,6 @@
 
 const DB_KEY = process.env.DB_KEY || 'secretkey'
 const JWT_KEY = process.env.JWT_KEY || 'secretkey'
-const JWT_ISSUER = process.env.JWT_ISSUER || 'COMPILEX'
+const JWT_ISSUER = process.env.JWT_ISSUER || 'KodIt'
 
 module.exports = { DB_KEY, JWT_KEY, JWT_ISSUER }

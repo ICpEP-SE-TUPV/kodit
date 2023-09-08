@@ -1,6 +1,6 @@
 ARG PORT=3000
-ARG MAINTAINER="Adriane Justine Tan <eidoriantan.me>"
-ARG DESCRIPTION="COMPILEX Docker image"
+ARG MAINTAINER="ICpEP.SE - TUPV <tupv.bscpe@tup.edu.ph>"
+ARG DESCRIPTION="KodIt Docker image"
 ARG VERSION="1.0.0-beta.0"
 
 FROM node:18.17.1-alpine AS builder
@@ -27,11 +27,11 @@ COPY tsconfig.json .
 COPY webpack.config.js .
 RUN npm run build
 
-# Download COMPILEX user program image
+# Download KodIt user program image
 WORKDIR /usr/local/bin
 RUN wget -q https://raw.githubusercontent.com/moby/moby/master/contrib/download-frozen-image-v2.sh
 RUN chmod +x download-frozen-image-v2.sh
-RUN download-frozen-image-v2.sh /usr/src/compilex-program eidoriantan/compilex-program:latest
+RUN download-frozen-image-v2.sh /usr/src/kodit-program eidoriantan/kodit-program:latest
 
 FROM docker:dind
 LABEL maintainer=${MAINTAINER}
@@ -49,8 +49,8 @@ COPY LICENSE.txt .
 COPY package*.json .
 RUN npm prune --omit=dev
 
-WORKDIR /usr/src/compilex-program
-COPY --from=builder /usr/src/compilex-program .
+WORKDIR /usr/src/kodit-program
+COPY --from=builder /usr/src/kodit-program .
 
 WORKDIR /usr/local/bin
 COPY scripts/start.sh .

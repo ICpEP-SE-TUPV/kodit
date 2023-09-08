@@ -1,6 +1,6 @@
 node_modules/
 build/
 mount/
-compilex.db*
+kodit.db*
 npm-debug.log
 .env.*

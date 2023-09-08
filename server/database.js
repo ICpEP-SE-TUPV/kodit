@@ -1,6 +1,6 @@
 /**
- *  COMPILEX
- *  Copyright (C) 2023, Adriane Justine Tan
+ *  KodIt
+ *  Copyright (C) 2023, ICpEP.SE - TUPV
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ const path = require('node:path')
 const Database = require('better-sqlite3-multiple-ciphers')
 const { DB_KEY } = require('./variables')
 
-const databasePath = path.resolve(__dirname, '../compilex.db')
+const databasePath = path.resolve(__dirname, '../kodit.db')
 const setupPath = path.resolve(__dirname, 'database.sql')
 const setupSql = fs.readFileSync(setupPath, { encoding: 'utf-8' })
 

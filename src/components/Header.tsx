@@ -1,6 +1,6 @@
 /**
- *  COMPILEX
- *  Copyright (C) 2023, Adriane Justine Tan
+ *  KodIt
+ *  Copyright (C) 2023, ICpEP.SE - TUPV
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -56,8 +56,7 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
       <Container>
         <div className="d-flex flex-column flex-sm-row flex-wrap align-items-center justify-content-start justify-content-sm-between">
           <Link to="/" className="d-flex align-items-center flex-fill mb-2 mb-sm-0 text-white text-decoration-none">
-            <img src={logo} alt="COMPILEX Logo" width="32" height="32" className="me-2" />
-            <span className="fs-5">COMPILEX</span>
+            <img src={logo} alt="KodIt Logo" width="32" height="32" />
           </Link>
 
           <Nav activeKey={activeKey} as="ul">
