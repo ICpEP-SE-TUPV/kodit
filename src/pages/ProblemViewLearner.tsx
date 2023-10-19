@@ -213,7 +213,7 @@ const ProblemViewLearner: React.FC<ProblemViewLearnerProps> = (props: ProblemVie
               output = filtered[0].output;
             }
 
-            const textColor = percentText(score / testcase.points);
+            const textColor = percentText(score / testcase.points, true);
             return testcase.hidden ? (
               <Card className="mb-3" key={i}>
                 <Card.Body>

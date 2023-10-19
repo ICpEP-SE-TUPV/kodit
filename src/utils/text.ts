@@ -16,9 +16,10 @@
  *  along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
-export function percentText (percent: number) {
+export function percentText (percent: number, showDanger = false) {
   let color = '';
   if (percent === 1) color = 'text-success';
   if (percent < 1 && percent > 0.5) color = 'text-warning';
+  if (percent <= 0.5 && showDanger) color = 'text-danger';
   return color;
 }
