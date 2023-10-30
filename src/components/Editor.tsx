@@ -82,6 +82,7 @@ const Editor: React.FC<EditorProps> = (props: EditorProps) => {
   const terminalRef = useRef<string>('');
   const errTerminalRef = useRef<string>('');
   const [running, setRunning] = useState<boolean>(false);
+  const [edited, setEdited] = useState<boolean>(false);
 
   const extensions = useMemo(() => {
     const exts = [];
@@ -93,6 +94,7 @@ const Editor: React.FC<EditorProps> = (props: EditorProps) => {
   const updateCode = useCallback((value: string) => {
     setCode(value);
     codeChange(value);
+    setEdited(true);
   }, [codeChange]);
 
   const updateLanguage = useCallback((event: React.ChangeEvent) => {
@@ -172,11 +174,14 @@ const Editor: React.FC<EditorProps> = (props: EditorProps) => {
   }, []);
 
   useEffect(() => {
-    const helloCode = code !== '' ? code : languages[language].hello;
-    setCode(helloCode);
-    codeChange(helloCode);
+    codeChange(code);
     languageChange(language);
   }, [code, language, codeChange, languageChange]);
+
+  useEffect(() => {
+    const displayCode = defaultCode !== '' || edited ? code : languages[language].hello;
+    setCode(displayCode);
+  }, [defaultCode, edited, code, language]);
 
   return (
     <Row className={`align-items-stretch ${sticky ? 'editor-sticky' : ''}`.trim()}>
