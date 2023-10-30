@@ -85,7 +85,7 @@ const Editor: React.FC<EditorProps> = (props: EditorProps) => {
 
   const extensions = useMemo(() => {
     const exts = [];
-    if (language === 'cpp') exts.push(cpp());
+    if (language === 'c' || language === 'cpp') exts.push(cpp());
     if (language === 'java') exts.push(java());
     return exts;
   }, [language]);
